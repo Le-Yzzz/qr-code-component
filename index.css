@@ -1,24 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: outfit, sans-serif;
 }
 
 body {
   background-color: hsl(212, 45%, 89%);
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
-  flex-flow: column;
+  height: 100vh;
 }
 
 .container {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
+  width: 311px;
+  margin: 15% auto;
 }
 
-@media screen and (min-width: 375px) {
-  .container;
+.sub-container {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+}
+
+.sub-container h1 {
+  font-weight: 700;
+  font-size: 22px;
+  color: hsl(218, 44%, 22%);
+  margin-bottom: 0.9em;
+}
+
+.sub-container p {
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(220, 15%, 55%);
+  margin-bottom: 1.7em;
+}
+
+.qr {
+  margin-bottom: 1.1em;
+}
+.qr img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .attribution {
@@ -27,4 +59,15 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 85%;
+    margin: 25% auto;
+  }
+
+  .sub-container {
+    padding: 16px;
+  }
 }
